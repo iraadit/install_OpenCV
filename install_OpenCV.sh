@@ -74,28 +74,28 @@ cd opencv &&
 mkdir build &&
 cd build &&
 
-cmake -D CMAKE_BUILD_TYPE=RELEASE \
+cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
-  -D PYTHON3_EXECUTABLE=~/anaconda3/bin/python \
-  -D BUILD_opencv_python3=ON \
+  	-D PYTHON3_EXECUTABLE=~/anaconda3/bin/python \
+  	-D BUILD_opencv_python3=ON \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
-  -D WITH_QT=ON \
-  -D WITH_OPENGL=ON \
-  -D WITH_CUDA=ON \
-  -D WITH_OPENCL=ON \
-  -D WITH_EIGEN=ON  \
-  -D WITH_VTK=OFF  \
-  -D WITH_V4L=ON \
-  -D WITH_TBB=ON \
-  -D WITH_IPP=ON \
-  -D WITH_GSTREAMER=ON \
-  -D WITH_FFMPEG=ON \
-  -D BUILD_TESTS=ON \
-  -D BUILD_TIFF=ON \
-  -D BUILD_PERF_TESTS=ON \
-  -D BUILD_opencv_cudacodec=OFF \
+  	-D WITH_QT=ON \
+  	-D WITH_OPENGL=ON \
+  	-D WITH_CUDA=ON \
+  	-D WITH_OPENCL=ON \
+  	-D WITH_EIGEN=ON  \
+  	-D WITH_VTK=OFF  \
+  	-D WITH_V4L=ON \
+  	-D WITH_TBB=ON \
+  	-D WITH_IPP=ON \
+  	-D WITH_GSTREAMER=ON \
+  	-D WITH_FFMPEG=ON \
+  	-D BUILD_TESTS=ON \
+  	-D BUILD_TIFF=ON \
+  	-D BUILD_PERF_TESTS=ON \
+  	-D BUILD_opencv_cudacodec=OFF \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
 	-D BUILD_EXAMPLES=ON .. &&
 
