@@ -79,7 +79,6 @@ cd build &&
 
 cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
-	-D BUILD_opencv_python3=ON \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
 	-D INSTALL_C_EXAMPLES=ON \
 	-D OPENCV_ENABLE_NONFREE=ON \
@@ -99,9 +98,10 @@ cmake 	-D CMAKE_BUILD_TYPE=RELEASE \
   	-D BUILD_TIFF=ON \
   	-D BUILD_PERF_TESTS=ON \
   	-D BUILD_opencv_cudacodec=OFF \
- 	-D PYTHON3_EXECUTABLE=$(which python) \
- 	-D PYTHON3_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
- 	-D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+ #  -D BUILD_opencv_python3=ON \
+ # 	-D PYTHON3_EXECUTABLE=$(which python) \
+ # 	-D PYTHON3_INCLUDE_DIR=$(python -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+ # 	-D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
 	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
 	-D BUILD_EXAMPLES=ON .. &&
 
